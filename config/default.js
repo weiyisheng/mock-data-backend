@@ -12,3 +12,5 @@ export const db = {
     }
   }
 };
+
+export const HOST = "192.168.238.136:4000";

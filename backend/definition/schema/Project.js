@@ -1,6 +1,6 @@
 const SG = require("simple-graphql").default;
 
-export default SG.schema("Product", {
+export default SG.schema("Project", {
   plugin: {
     pluralQuery: true,
     singularQuery: true,
@@ -11,13 +11,13 @@ export default SG.schema("Product", {
 })
   .fields({
     name: "String",
-    path: "String",
+    pathKey: "String",
     remark: "String"
   })
   .hasMany({
     mocks: {
       target: "Mock",
-      foreignField: "product",
+      foreignField: "project",
       order: [["id", "DESC"]]
     }
   });

@@ -119,7 +119,7 @@
               "deprecationReason": null
             },
             {
-              "name": "products",
+              "name": "projects",
               "description": null,
               "args": [
                 {
@@ -170,7 +170,7 @@
                     "name": null,
                     "ofType": {
                       "kind": "INPUT_OBJECT",
-                      "name": "ProductsConditionInput",
+                      "name": "ProjectsConditionInput",
                       "ofType": null
                     }
                   },
@@ -184,7 +184,7 @@
                     "name": null,
                     "ofType": {
                       "kind": "INPUT_OBJECT",
-                      "name": "ProductsSortInput",
+                      "name": "ProjectsSortInput",
                       "ofType": null
                     }
                   },
@@ -193,22 +193,22 @@
               ],
               "type": {
                 "kind": "OBJECT",
-                "name": "ProductConnection",
+                "name": "ProjectConnection",
                 "ofType": null
               },
               "isDeprecated": false,
               "deprecationReason": null
             },
             {
-              "name": "product",
+              "name": "project",
               "description": null,
               "args": [
                 {
                   "name": "id",
-                  "description": "Id of Schema Product",
+                  "description": "Id of Schema Project",
                   "type": {
                     "kind": "SCALAR",
-                    "name": "ProductId",
+                    "name": "ProjectId",
                     "ofType": null
                   },
                   "defaultValue": null
@@ -216,7 +216,7 @@
               ],
               "type": {
                 "kind": "OBJECT",
-                "name": "Product",
+                "name": "Project",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -318,11 +318,11 @@
               "defaultValue": null
             },
             {
-              "name": "path",
+              "name": "pathKey",
               "description": null,
               "type": {
                 "kind": "INPUT_OBJECT",
-                "name": "MocksConditionPathInput",
+                "name": "MocksConditionPathKeyInput",
                 "ofType": null
               },
               "defaultValue": null
@@ -348,11 +348,11 @@
               "defaultValue": null
             },
             {
-              "name": "productId",
+              "name": "projectId",
               "description": null,
               "type": {
                 "kind": "INPUT_OBJECT",
-                "name": "MocksConditionProductIdInput",
+                "name": "MocksConditionProjectIdInput",
                 "ofType": null
               },
               "defaultValue": null
@@ -582,7 +582,7 @@
         },
         {
           "kind": "INPUT_OBJECT",
-          "name": "MocksConditionPathInput",
+          "name": "MocksConditionPathKeyInput",
           "description": null,
           "fields": null,
           "inputFields": [
@@ -909,7 +909,7 @@
         },
         {
           "kind": "INPUT_OBJECT",
-          "name": "MocksConditionProductIdInput",
+          "name": "MocksConditionProjectIdInput",
           "description": null,
           "fields": null,
           "inputFields": [
@@ -918,7 +918,7 @@
               "description": null,
               "type": {
                 "kind": "SCALAR",
-                "name": "ProductId",
+                "name": "ProjectId",
                 "ofType": null
               },
               "defaultValue": null
@@ -928,7 +928,7 @@
               "description": null,
               "type": {
                 "kind": "SCALAR",
-                "name": "ProductId",
+                "name": "ProjectId",
                 "ofType": null
               },
               "defaultValue": null
@@ -941,7 +941,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "SCALAR",
-                  "name": "ProductId",
+                  "name": "ProjectId",
                   "ofType": null
                 }
               },
@@ -955,7 +955,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "SCALAR",
-                  "name": "ProductId",
+                  "name": "ProjectId",
                   "ofType": null
                 }
               },
@@ -968,8 +968,8 @@
         },
         {
           "kind": "SCALAR",
-          "name": "ProductId",
-          "description": "Global id of Product",
+          "name": "ProjectId",
+          "description": "Global id of Project",
           "fields": null,
           "inputFields": null,
           "interfaces": null,
@@ -1276,8 +1276,8 @@
               "deprecationReason": null
             },
             {
-              "name": "path",
-              "description": "path",
+              "name": "pathKey",
+              "description": "pathKey",
               "isDeprecated": false,
               "deprecationReason": null
             },
@@ -1294,8 +1294,8 @@
               "deprecationReason": null
             },
             {
-              "name": "productId",
-              "description": "productId",
+              "name": "projectId",
+              "description": "projectId",
               "isDeprecated": false,
               "deprecationReason": null
             },
@@ -1542,7 +1542,7 @@
               "deprecationReason": null
             },
             {
-              "name": "path",
+              "name": "pathKey",
               "description": null,
               "args": [],
               "type": {
@@ -1578,12 +1578,12 @@
               "deprecationReason": null
             },
             {
-              "name": "product",
+              "name": "project",
               "description": null,
               "args": [],
               "type": {
                 "kind": "OBJECT",
-                "name": "Product",
+                "name": "Project",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -1658,7 +1658,7 @@
             },
             {
               "kind": "OBJECT",
-              "name": "Product",
+              "name": "Project",
               "ofType": null
             }
           ]
@@ -1675,7 +1675,7 @@
         },
         {
           "kind": "OBJECT",
-          "name": "Product",
+          "name": "Project",
           "description": null,
           "fields": [
             {
@@ -1707,7 +1707,7 @@
               "deprecationReason": null
             },
             {
-              "name": "path",
+              "name": "pathKey",
               "description": null,
               "args": [],
               "type": {
@@ -1821,7 +1821,7 @@
         },
         {
           "kind": "INPUT_OBJECT",
-          "name": "ProductsConditionInput",
+          "name": "ProjectsConditionInput",
           "description": null,
           "fields": null,
           "inputFields": [
@@ -1830,7 +1830,7 @@
               "description": null,
               "type": {
                 "kind": "INPUT_OBJECT",
-                "name": "ProductsConditionIdInput",
+                "name": "ProjectsConditionIdInput",
                 "ofType": null
               },
               "defaultValue": null
@@ -1840,17 +1840,17 @@
               "description": null,
               "type": {
                 "kind": "INPUT_OBJECT",
-                "name": "ProductsConditionNameInput",
+                "name": "ProjectsConditionNameInput",
                 "ofType": null
               },
               "defaultValue": null
             },
             {
-              "name": "path",
+              "name": "pathKey",
               "description": null,
               "type": {
                 "kind": "INPUT_OBJECT",
-                "name": "ProductsConditionPathInput",
+                "name": "ProjectsConditionPathKeyInput",
                 "ofType": null
               },
               "defaultValue": null
@@ -1860,7 +1860,7 @@
               "description": null,
               "type": {
                 "kind": "INPUT_OBJECT",
-                "name": "ProductsConditionRemarkInput",
+                "name": "ProjectsConditionRemarkInput",
                 "ofType": null
               },
               "defaultValue": null
@@ -1870,7 +1870,7 @@
               "description": null,
               "type": {
                 "kind": "INPUT_OBJECT",
-                "name": "ProductsConditionCreatedAtInput",
+                "name": "ProjectsConditionCreatedAtInput",
                 "ofType": null
               },
               "defaultValue": null
@@ -1880,7 +1880,7 @@
               "description": null,
               "type": {
                 "kind": "INPUT_OBJECT",
-                "name": "ProductsConditionUpdatedAtInput",
+                "name": "ProjectsConditionUpdatedAtInput",
                 "ofType": null
               },
               "defaultValue": null
@@ -1892,7 +1892,7 @@
         },
         {
           "kind": "INPUT_OBJECT",
-          "name": "ProductsConditionIdInput",
+          "name": "ProjectsConditionIdInput",
           "description": null,
           "fields": null,
           "inputFields": [
@@ -1901,7 +1901,7 @@
               "description": null,
               "type": {
                 "kind": "SCALAR",
-                "name": "ProductId",
+                "name": "ProjectId",
                 "ofType": null
               },
               "defaultValue": null
@@ -1911,7 +1911,7 @@
               "description": null,
               "type": {
                 "kind": "SCALAR",
-                "name": "ProductId",
+                "name": "ProjectId",
                 "ofType": null
               },
               "defaultValue": null
@@ -1924,7 +1924,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "SCALAR",
-                  "name": "ProductId",
+                  "name": "ProjectId",
                   "ofType": null
                 }
               },
@@ -1938,7 +1938,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "SCALAR",
-                  "name": "ProductId",
+                  "name": "ProjectId",
                   "ofType": null
                 }
               },
@@ -1951,136 +1951,7 @@
         },
         {
           "kind": "INPUT_OBJECT",
-          "name": "ProductsConditionNameInput",
-          "description": null,
-          "fields": null,
-          "inputFields": [
-            {
-              "name": "ne",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "eq",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "in",
-              "description": null,
-              "type": {
-                "kind": "LIST",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                }
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "notIn",
-              "description": null,
-              "type": {
-                "kind": "LIST",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                }
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "like",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "notLike",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "startsWith",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "endsWith",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "substring",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "regexp",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "notRegexp",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "defaultValue": null
-            }
-          ],
-          "interfaces": null,
-          "enumValues": null,
-          "possibleTypes": null
-        },
-        {
-          "kind": "INPUT_OBJECT",
-          "name": "ProductsConditionPathInput",
+          "name": "ProjectsConditionNameInput",
           "description": null,
           "fields": null,
           "inputFields": [
@@ -2209,7 +2080,7 @@
         },
         {
           "kind": "INPUT_OBJECT",
-          "name": "ProductsConditionRemarkInput",
+          "name": "ProjectsConditionPathKeyInput",
           "description": null,
           "fields": null,
           "inputFields": [
@@ -2338,7 +2209,136 @@
         },
         {
           "kind": "INPUT_OBJECT",
-          "name": "ProductsConditionCreatedAtInput",
+          "name": "ProjectsConditionRemarkInput",
+          "description": null,
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "ne",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "eq",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "in",
+              "description": null,
+              "type": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "notIn",
+              "description": null,
+              "type": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "like",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "notLike",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "startsWith",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "endsWith",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "substring",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "regexp",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "notRegexp",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "ProjectsConditionCreatedAtInput",
           "description": null,
           "fields": null,
           "inputFields": [
@@ -2457,7 +2457,7 @@
         },
         {
           "kind": "INPUT_OBJECT",
-          "name": "ProductsConditionUpdatedAtInput",
+          "name": "ProjectsConditionUpdatedAtInput",
           "description": null,
           "fields": null,
           "inputFields": [
@@ -2576,7 +2576,7 @@
         },
         {
           "kind": "INPUT_OBJECT",
-          "name": "ProductsSortInput",
+          "name": "ProjectsSortInput",
           "description": null,
           "fields": null,
           "inputFields": [
@@ -2585,7 +2585,7 @@
               "description": null,
               "type": {
                 "kind": "ENUM",
-                "name": "ProductsSortFieldInput",
+                "name": "ProjectsSortFieldInput",
                 "ofType": null
               },
               "defaultValue": null
@@ -2595,7 +2595,7 @@
               "description": null,
               "type": {
                 "kind": "ENUM",
-                "name": "ProductsSortOrderInput",
+                "name": "ProjectsSortOrderInput",
                 "ofType": null
               },
               "defaultValue": null
@@ -2607,7 +2607,7 @@
         },
         {
           "kind": "ENUM",
-          "name": "ProductsSortFieldInput",
+          "name": "ProjectsSortFieldInput",
           "description": null,
           "fields": null,
           "inputFields": null,
@@ -2626,8 +2626,8 @@
               "deprecationReason": null
             },
             {
-              "name": "path",
-              "description": "path",
+              "name": "pathKey",
+              "description": "pathKey",
               "isDeprecated": false,
               "deprecationReason": null
             },
@@ -2654,7 +2654,7 @@
         },
         {
           "kind": "ENUM",
-          "name": "ProductsSortOrderInput",
+          "name": "ProjectsSortOrderInput",
           "description": null,
           "fields": null,
           "inputFields": null,
@@ -2677,7 +2677,7 @@
         },
         {
           "kind": "OBJECT",
-          "name": "ProductConnection",
+          "name": "ProjectConnection",
           "description": "A connection to a list of items.",
           "fields": [
             {
@@ -2705,7 +2705,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "OBJECT",
-                  "name": "ProductEdge",
+                  "name": "ProjectEdge",
                   "ofType": null
                 }
               },
@@ -2732,7 +2732,7 @@
         },
         {
           "kind": "OBJECT",
-          "name": "ProductEdge",
+          "name": "ProjectEdge",
           "description": "An edge in a connection.",
           "fields": [
             {
@@ -2741,7 +2741,7 @@
               "args": [],
               "type": {
                 "kind": "OBJECT",
-                "name": "Product",
+                "name": "Project",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -2895,7 +2895,7 @@
               "deprecationReason": null
             },
             {
-              "name": "products",
+              "name": "projects",
               "description": null,
               "args": [
                 {
@@ -2946,7 +2946,7 @@
                     "name": null,
                     "ofType": {
                       "kind": "INPUT_OBJECT",
-                      "name": "ProductsConditionInput",
+                      "name": "ProjectsConditionInput",
                       "ofType": null
                     }
                   },
@@ -2960,7 +2960,7 @@
                     "name": null,
                     "ofType": {
                       "kind": "INPUT_OBJECT",
-                      "name": "ProductsSortInput",
+                      "name": "ProjectsSortInput",
                       "ofType": null
                     }
                   },
@@ -2969,22 +2969,22 @@
               ],
               "type": {
                 "kind": "OBJECT",
-                "name": "ProductConnection",
+                "name": "ProjectConnection",
                 "ofType": null
               },
               "isDeprecated": false,
               "deprecationReason": null
             },
             {
-              "name": "product",
+              "name": "project",
               "description": null,
               "args": [
                 {
                   "name": "id",
-                  "description": "Id of Schema Product",
+                  "description": "Id of Schema Project",
                   "type": {
                     "kind": "SCALAR",
-                    "name": "ProductId",
+                    "name": "ProjectId",
                     "ofType": null
                   },
                   "defaultValue": null
@@ -2992,7 +2992,7 @@
               ],
               "type": {
                 "kind": "OBJECT",
-                "name": "Product",
+                "name": "Project",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -3091,7 +3091,7 @@
               "deprecationReason": null
             },
             {
-              "name": "addProduct",
+              "name": "addProject",
               "description": null,
               "args": [
                 {
@@ -3102,7 +3102,7 @@
                     "name": null,
                     "ofType": {
                       "kind": "INPUT_OBJECT",
-                      "name": "AddProductInput",
+                      "name": "AddProjectInput",
                       "ofType": null
                     }
                   },
@@ -3111,14 +3111,14 @@
               ],
               "type": {
                 "kind": "OBJECT",
-                "name": "AddProductPayload",
+                "name": "AddProjectPayload",
                 "ofType": null
               },
               "isDeprecated": false,
               "deprecationReason": null
             },
             {
-              "name": "deleteProduct",
+              "name": "deleteProject",
               "description": null,
               "args": [
                 {
@@ -3129,7 +3129,7 @@
                     "name": null,
                     "ofType": {
                       "kind": "INPUT_OBJECT",
-                      "name": "DeleteProductInput",
+                      "name": "DeleteProjectInput",
                       "ofType": null
                     }
                   },
@@ -3138,14 +3138,14 @@
               ],
               "type": {
                 "kind": "OBJECT",
-                "name": "DeleteProductPayload",
+                "name": "DeleteProjectPayload",
                 "ofType": null
               },
               "isDeprecated": false,
               "deprecationReason": null
             },
             {
-              "name": "updateProduct",
+              "name": "updateProject",
               "description": null,
               "args": [
                 {
@@ -3156,7 +3156,7 @@
                     "name": null,
                     "ofType": {
                       "kind": "INPUT_OBJECT",
-                      "name": "UpdateProductInput",
+                      "name": "UpdateProjectInput",
                       "ofType": null
                     }
                   },
@@ -3165,7 +3165,7 @@
               ],
               "type": {
                 "kind": "OBJECT",
-                "name": "UpdateProductPayload",
+                "name": "UpdateProjectPayload",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -3194,7 +3194,7 @@
               "defaultValue": null
             },
             {
-              "name": "path",
+              "name": "pathKey",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3224,11 +3224,11 @@
               "defaultValue": null
             },
             {
-              "name": "productId",
+              "name": "projectId",
               "description": null,
               "type": {
                 "kind": "SCALAR",
-                "name": "ProductId",
+                "name": "ProjectId",
                 "ofType": null
               },
               "defaultValue": null
@@ -3435,7 +3435,7 @@
               "defaultValue": null
             },
             {
-              "name": "path",
+              "name": "pathKey",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3465,11 +3465,11 @@
               "defaultValue": null
             },
             {
-              "name": "productId",
+              "name": "projectId",
               "description": null,
               "type": {
                 "kind": "SCALAR",
-                "name": "ProductId",
+                "name": "ProjectId",
                 "ofType": null
               },
               "defaultValue": null
@@ -3520,7 +3520,7 @@
         },
         {
           "kind": "INPUT_OBJECT",
-          "name": "AddProductInput",
+          "name": "AddProjectInput",
           "description": null,
           "fields": null,
           "inputFields": [
@@ -3535,7 +3535,7 @@
               "defaultValue": null
             },
             {
-              "name": "path",
+              "name": "pathKey",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3575,16 +3575,16 @@
         },
         {
           "kind": "OBJECT",
-          "name": "AddProductPayload",
+          "name": "AddProjectPayload",
           "description": null,
           "fields": [
             {
-              "name": "addedProductEdge",
+              "name": "addedProjectEdge",
               "description": null,
               "args": [],
               "type": {
                 "kind": "OBJECT",
-                "name": "ProductEdge",
+                "name": "ProjectEdge",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -3614,7 +3614,7 @@
         },
         {
           "kind": "INPUT_OBJECT",
-          "name": "DeleteProductInput",
+          "name": "DeleteProjectInput",
           "description": null,
           "fields": null,
           "inputFields": [
@@ -3626,7 +3626,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "SCALAR",
-                  "name": "ProductId",
+                  "name": "ProjectId",
                   "ofType": null
                 }
               },
@@ -3653,16 +3653,16 @@
         },
         {
           "kind": "OBJECT",
-          "name": "DeleteProductPayload",
+          "name": "DeleteProjectPayload",
           "description": null,
           "fields": [
             {
-              "name": "deletedProduct",
+              "name": "deletedProject",
               "description": null,
               "args": [],
               "type": {
                 "kind": "OBJECT",
-                "name": "Product",
+                "name": "Project",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -3692,7 +3692,7 @@
         },
         {
           "kind": "INPUT_OBJECT",
-          "name": "UpdateProductInput",
+          "name": "UpdateProjectInput",
           "description": null,
           "fields": null,
           "inputFields": [
@@ -3704,7 +3704,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "SCALAR",
-                  "name": "ProductId",
+                  "name": "ProjectId",
                   "ofType": null
                 }
               },
@@ -3715,7 +3715,7 @@
               "description": null,
               "type": {
                 "kind": "INPUT_OBJECT",
-                "name": "UpdateProductValuesInput",
+                "name": "UpdateProjectValuesInput",
                 "ofType": null
               },
               "defaultValue": null
@@ -3741,7 +3741,7 @@
         },
         {
           "kind": "INPUT_OBJECT",
-          "name": "UpdateProductValuesInput",
+          "name": "UpdateProjectValuesInput",
           "description": null,
           "fields": null,
           "inputFields": [
@@ -3756,7 +3756,7 @@
               "defaultValue": null
             },
             {
-              "name": "path",
+              "name": "pathKey",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -3782,16 +3782,16 @@
         },
         {
           "kind": "OBJECT",
-          "name": "UpdateProductPayload",
+          "name": "UpdateProjectPayload",
           "description": null,
           "fields": [
             {
-              "name": "changedProduct",
+              "name": "changedProject",
               "description": null,
               "args": [],
               "type": {
                 "kind": "OBJECT",
-                "name": "Product",
+                "name": "Project",
                 "ofType": null
               },
               "isDeprecated": false,

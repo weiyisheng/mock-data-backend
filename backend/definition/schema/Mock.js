@@ -10,8 +10,8 @@ export default SG.schema("Mock", {
   }
 }).fields({
   name: "String",
-  path: "String",
+  pathKey: "String",
   remark: "String",
   template: "JSON",
-  product: "Product"
+  project: "Project"
 });

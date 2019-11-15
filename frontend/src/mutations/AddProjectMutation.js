@@ -2,15 +2,14 @@ import { graphql } from "react-relay";
 import commitMutation from "./commitMutation";
 
 const mutation = graphql`
-  mutation AddMockMutation($input: AddMockInput!) {
-    addMock(input: $input) {
-      addedMockEdge {
+  mutation AddProjectMutation($input: AddProjectInput!) {
+    addProject(input: $input) {
+      addedProjectEdge {
         node {
           id
           name
-          pathKey
-          project {
-            pathKey
+          mocks {
+            count
           }
         }
       }
@@ -18,7 +17,7 @@ const mutation = graphql`
   }
 `;
 
-function commit({ input, parentID, onCompleted, onError }) {
+function commit({ input, viewerID, onCompleted, onError }) {
   commitMutation({
     mutation,
     variables: {
@@ -27,14 +26,14 @@ function commit({ input, parentID, onCompleted, onError }) {
     configs: [
       {
         type: "RANGE_ADD",
-        parentID,
+        parentID: viewerID,
         connectionInfo: [
           {
-            key: "ProjectDetail_mocks",
+            key: "ProjectList_projects",
             rangeBehavior: "prepend"
           }
         ],
-        edgeName: "addedMockEdge"
+        edgeName: "addedProjectEdge"
       }
     ],
     onCompleted,

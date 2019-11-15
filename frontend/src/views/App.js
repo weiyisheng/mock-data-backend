@@ -10,15 +10,18 @@ import {
   Switch,
   Route,
   BrowserRouter as Router,
-  withRouter
+  withRouter,
+  Link
 } from "react-router-dom";
 
 //components
 import AppBreadcrumb from "/src/components/AppBreadcrumb";
 
 // pages
-import ProductList from "/src/views/product/ProductList";
-import ProductDetail from "/src/views/product/ProductDetail";
+import ProjectList from "/src/views/project/ProjectList";
+import ProjectDetail from "/src/views/project/ProjectDetail";
+
+import MockDetail from "/src/views/mock/MockDetail";
 
 function App() {
   //states
@@ -29,7 +32,9 @@ function App() {
     return (
       <Content className="main-layout">
         <Header>
-          <div className="logo">Mock Data</div>
+          <Link className="logo" to="/">
+            Mock Data
+          </Link>
           <Menu
             theme="dark"
             mode="horizontal"
@@ -41,12 +46,13 @@ function App() {
           <div style={{ background: "#fff", padding: 24, minHeight: 280 }}>
             <AppBreadcrumb location={location} />
             <Switch>
-              <Route path="/" exact component={ProductList} />
+              <Route path="/" exact component={ProjectList} />
               <Route
-                path="/product/detail/:productId"
+                path="/project/detail/:projectId"
                 exact
-                component={ProductDetail}
+                component={ProjectDetail}
               />
+              <Route path="/mock/detail/:mockId" exact component={MockDetail} />
             </Switch>
           </div>
         </Content>

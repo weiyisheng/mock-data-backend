@@ -2,16 +2,16 @@ import { graphql } from "react-relay";
 import commitMutation from "./commitMutation";
 
 const mutation = graphql`
-  mutation DeleteMockMutation($input: DeleteMockInput!) {
-    deleteMock(input: $input) {
-      deletedMock {
+  mutation DeleteProjectMutation($input: DeleteProjectInput!) {
+    deleteProject(input: $input) {
+      deletedProject {
         id
       }
     }
   }
 `;
 
-function commit({ input, parentID, onCompleted, onError }) {
+function commit({ input, viewerID, onCompleted, onError }) {
   commitMutation({
     mutation,
     variables: {
@@ -20,14 +20,14 @@ function commit({ input, parentID, onCompleted, onError }) {
     configs: [
       {
         type: "RANGE_DELETE",
-        parentID,
+        parentID: viewerID,
         connectionKeys: [
           {
-            key: "ProjectDetail_mocks"
+            key: "ProjectList_projects"
           }
         ],
-        pathToConnection: ["project", "mocks"],
-        deletedIDFieldName: ["deletedMock"]
+        pathToConnection: ["viewer", "projects"],
+        deletedIDFieldName: ["deletedProject"]
       }
     ],
     onCompleted,

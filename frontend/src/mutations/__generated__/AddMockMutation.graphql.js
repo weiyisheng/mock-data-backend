@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash 59a58b5737da0f04d7f7f25c29762cad
+ * @relayHash e92f416191b8bafbf495d33f568c0b06
  */
 
 /* eslint-disable */
@@ -11,10 +11,10 @@
 import type { ConcreteRequest } from 'relay-runtime';
 export type AddMockInput = {|
   name?: ?string,
-  path?: ?string,
+  pathKey?: ?string,
   remark?: ?string,
   template?: ?any,
-  productId?: ?any,
+  projectId?: ?any,
   clientMutationId: string,
 |};
 export type AddMockMutationVariables = {|
@@ -26,9 +26,9 @@ export type AddMockMutationResponse = {|
       +node: ?{|
         +id: string,
         +name: ?string,
-        +path: ?string,
-        +product: ?{|
-          +path: ?string
+        +pathKey: ?string,
+        +project: ?{|
+          +pathKey: ?string
         |},
       |}
     |}
@@ -50,9 +50,9 @@ mutation AddMockMutation(
       node {
         id
         name
-        path
-        product {
-          path
+        pathKey
+        project {
+          pathKey
           id
         }
       }
@@ -94,7 +94,7 @@ v3 = {
 v4 = {
   "kind": "ScalarField",
   "alias": null,
-  "name": "path",
+  "name": "pathKey",
   "args": null,
   "storageKey": null
 };
@@ -140,10 +140,10 @@ return {
                   {
                     "kind": "LinkedField",
                     "alias": null,
-                    "name": "product",
+                    "name": "project",
                     "storageKey": null,
                     "args": null,
-                    "concreteType": "Product",
+                    "concreteType": "Project",
                     "plural": false,
                     "selections": [
                       (v4/*: any*/)
@@ -195,10 +195,10 @@ return {
                   {
                     "kind": "LinkedField",
                     "alias": null,
-                    "name": "product",
+                    "name": "project",
                     "storageKey": null,
                     "args": null,
-                    "concreteType": "Product",
+                    "concreteType": "Project",
                     "plural": false,
                     "selections": [
                       (v4/*: any*/),
@@ -217,11 +217,11 @@ return {
     "operationKind": "mutation",
     "name": "AddMockMutation",
     "id": null,
-    "text": "mutation AddMockMutation(\n  $input: AddMockInput!\n) {\n  addMock(input: $input) {\n    addedMockEdge {\n      node {\n        id\n        name\n        path\n        product {\n          path\n          id\n        }\n      }\n    }\n  }\n}\n",
+    "text": "mutation AddMockMutation(\n  $input: AddMockInput!\n) {\n  addMock(input: $input) {\n    addedMockEdge {\n      node {\n        id\n        name\n        pathKey\n        project {\n          pathKey\n          id\n        }\n      }\n    }\n  }\n}\n",
     "metadata": {}
   }
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = 'a8408f3065975aceffbbfc296f05bddc';
+(node/*: any*/).hash = 'aac9a75fd18d7343659ed05129b2143f';
 module.exports = node;
