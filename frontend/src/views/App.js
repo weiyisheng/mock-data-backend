@@ -27,8 +27,6 @@ function App() {
   //states
 
   const Home = withRouter(props => {
-    const { location } = props;
-
     return (
       <Content className="main-layout">
         <Header>
@@ -44,7 +42,7 @@ function App() {
         </Header>
         <Content style={{ padding: "0 50px" }}>
           <div style={{ background: "#fff", padding: 24, minHeight: 280 }}>
-            <AppBreadcrumb location={location} />
+            <AppBreadcrumb {...props} />
             <Switch>
               <Route path="/" exact component={ProjectList} />
               <Route

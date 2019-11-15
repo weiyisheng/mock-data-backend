@@ -99,7 +99,7 @@ function MockDetail(props) {
           rel="noreferrer noopener"
           target="_blank"
         >
-          MockJS文档 >>>{" "}
+          查看MockJS模版规则
         </a>
       </Row>
       <Row>

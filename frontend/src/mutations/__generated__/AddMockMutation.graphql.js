@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash e92f416191b8bafbf495d33f568c0b06
+ * @relayHash 288dcd4f614f96e41bb3615f47e1e81f
  */
 
 /* eslint-disable */
@@ -14,7 +14,7 @@ export type AddMockInput = {|
   pathKey?: ?string,
   remark?: ?string,
   template?: ?any,
-  projectId?: ?any,
+  projectId: any,
   clientMutationId: string,
 |};
 export type AddMockMutationVariables = {|
@@ -27,7 +27,7 @@ export type AddMockMutationResponse = {|
         +id: string,
         +name: ?string,
         +pathKey: ?string,
-        +project: ?{|
+        +project: {|
           +pathKey: ?string
         |},
       |}

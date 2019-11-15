@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash d806875d7528864e808e2ec6db6ddfbb
+ * @relayHash a7678bb564196237374b399b73f0552e
  */
 
 /* eslint-disable */
@@ -25,7 +25,7 @@ export type ProjectDetailQueryResponse = {|
             +id: string,
             +name: ?string,
             +pathKey: ?string,
-            +project: ?{|
+            +project: {|
               +pathKey: ?string
             |},
           |}

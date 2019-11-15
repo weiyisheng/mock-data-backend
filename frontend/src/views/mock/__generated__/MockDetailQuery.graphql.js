@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash 8674c32a7f07e6665a4cac8c7697aaa4
+ * @relayHash 8db7e14bf18518e0986310fc19f4be6b
  */
 
 /* eslint-disable */
@@ -20,7 +20,7 @@ export type MockDetailQueryResponse = {|
       +name: ?string,
       +pathKey: ?string,
       +template: ?any,
-      +project: ?{|
+      +project: {|
         +id: string,
         +name: ?string,
         +pathKey: ?string,

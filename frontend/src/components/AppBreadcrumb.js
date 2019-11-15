@@ -1,17 +1,25 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 
-// import { Breadcrumb } from "antd";
+import { Breadcrumb } from "antd";
 
 //const breadcrumbNameMap = {};
 
-export default function AppBreadcrumb() {
-  return <div></div>;
+export default function AppBreadcrumb(props) {
   //props
-  // const { location } = props;
-  // console.log(" location : ", location);
-  //const pathSnippets = location.pathname.split("/").filter(i => i);
-  //const extraBreadcrumbItems = [];
+  const { location, history } = props;
+
+  if (location.pathname !== "/") {
+    return (
+      <Breadcrumb.Item key="home">
+        <a onClick={() => history.goBack()}>返回</a>
+      </Breadcrumb.Item>
+    );
+  } else {
+    return null;
+  }
+  // const pathSnippets = location.pathname.split("/").filter(i => i);
+  // const extraBreadcrumbItems = [];
   // pathSnippets.map((_, index) => {
   //   const url = `/${pathSnippets.slice(0, index + 1).join("/")}`;
   //   return (

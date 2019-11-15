@@ -6,18 +6,42 @@ import environment from "/src/environment";
 import { get } from "lodash";
 
 import { Table, Button, message, Modal, Col, Row } from "antd";
-
 const { confirm } = Modal;
 
 import mockColumns from "./mockColumns";
 
 import AddMockModal from "./components/AddMockModal";
 
+// mutations
+import DeleteProjectMutation from "/src/mutations/DeleteProjectMutation";
 import DeleteMockMutation from "/src/mutations/DeleteMockMutation";
+
+function deleteProject(project, viewerID, history) {
+  confirm({
+    title: `确认删除 “${project.name}” 项目?`,
+    okText: "删除",
+    okType: "danger",
+    cancelText: "取消",
+    onOk() {
+      DeleteProjectMutation.commit({
+        input: {
+          id: project.id
+        },
+        viewerID,
+        onCompleted() {
+          message.success("删除项目成功");
+        }
+      });
+    },
+    onCancel() {
+      history.goBack();
+    }
+  });
+}
 
 function ProjectDetail(props) {
   //props
-  const { viewer } = props;
+  const { viewer, history } = props;
 
   //state
   const [addModalVisible, setAddModalVisible] = useState(false);
@@ -57,15 +81,25 @@ function ProjectDetail(props) {
 
   return (
     <div className="project-detail">
-      <p
+      <Row
+        type="flex"
+        justify="space-between"
+        align="middle"
         style={{
           padding: "24px 0",
-          borderBottom: "1px solid #dcdcdc",
-          fontSize: 28
+          borderBottom: "1px solid #dcdcdc"
         }}
       >
-        {name}
-      </p>
+        <p style={{ fontSize: 28, margin: 0 }}>{name}</p>
+        <Button
+          type="danger"
+          ghost
+          size="small"
+          onClick={() => deleteProject(project, viewer.id, history)}
+        >
+          删除
+        </Button>
+      </Row>
       <Row style={{ margin: "16px 0" }}>
         <Col span={6}>
           <p className="project-name">项目名称：{name}</p>
@@ -138,7 +172,7 @@ export default outerProps => {
         if (!props) {
           return <div>Loading...</div>;
         }
-        return <ProjectDetail {...props} />;
+        return <ProjectDetail {...props} {...outerProps} />;
       }}
     />
   );

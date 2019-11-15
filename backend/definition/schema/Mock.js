@@ -13,5 +13,9 @@ export default SG.schema("Mock", {
   pathKey: "String",
   remark: "String",
   template: "JSON",
-  project: "Project"
+  project: {
+    $type: "Project",
+    required: true,
+    mutable: false
+  }
 });

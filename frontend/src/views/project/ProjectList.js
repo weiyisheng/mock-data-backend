@@ -5,13 +5,9 @@ import environment from "/src/environment";
 import { get } from "lodash";
 
 //components
-import { Button, Modal, message, Card, Row, Col, Icon } from "antd";
-const { confirm } = Modal;
+import { Card, Row, Col, Icon } from "antd";
 
 import AddProjectModal from "/src/views/project/components/AddProjectModal";
-
-// mutations
-import DeleteProjectMutation from "/src/mutations/DeleteProjectMutation";
 
 function ProjectList(props) {
   //props
@@ -19,29 +15,6 @@ function ProjectList(props) {
 
   //state
   const [addModalVisible, setAddModalVisible] = useState(false);
-
-  function handleDelete(project) {
-    confirm({
-      title: `确认删除 “${project.name}” 项目?`,
-      okText: "删除",
-      okType: "danger",
-      cancelText: "取消",
-      onOk() {
-        DeleteProjectMutation.commit({
-          input: {
-            id: project.id
-          },
-          viewerID: viewer.id,
-          onCompleted() {
-            message.success("删除项目成功");
-          }
-        });
-      },
-      onCancel() {
-        setAddModalVisible(false);
-      }
-    });
-  }
 
   const projects = (get(viewer, "projects.edges") || []).map(e => ({
     key: e.node.id,
