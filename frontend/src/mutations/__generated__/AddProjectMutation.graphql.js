@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash 2b9d3a1c3d5849f4f906d2a7a98efc9b
+ * @relayHash ca25635cbcd140abe5fa396748378bf1
  */
 
 /* eslint-disable */
@@ -24,6 +24,7 @@ export type AddProjectMutationResponse = {|
       +node: ?{|
         +id: string,
         +name: ?string,
+        +pathKey: ?string,
         +mocks: ?{|
           +count: ?number
         |},
@@ -47,6 +48,7 @@ mutation AddProjectMutation(
       node {
         id
         name
+        pathKey
         mocks {
           count
         }
@@ -114,6 +116,13 @@ v1 = [
                 "storageKey": null
               },
               {
+                "kind": "ScalarField",
+                "alias": null,
+                "name": "pathKey",
+                "args": null,
+                "storageKey": null
+              },
+              {
                 "kind": "LinkedField",
                 "alias": null,
                 "name": "mocks",
@@ -158,11 +167,11 @@ return {
     "operationKind": "mutation",
     "name": "AddProjectMutation",
     "id": null,
-    "text": "mutation AddProjectMutation(\n  $input: AddProjectInput!\n) {\n  addProject(input: $input) {\n    addedProjectEdge {\n      node {\n        id\n        name\n        mocks {\n          count\n        }\n      }\n    }\n  }\n}\n",
+    "text": "mutation AddProjectMutation(\n  $input: AddProjectInput!\n) {\n  addProject(input: $input) {\n    addedProjectEdge {\n      node {\n        id\n        name\n        pathKey\n        mocks {\n          count\n        }\n      }\n    }\n  }\n}\n",
     "metadata": {}
   }
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = '35109e09fb6782235116d1d3f0a73bc0';
+(node/*: any*/).hash = '0ce8cde2fed06d17a2139a29375b8a03';
 module.exports = node;

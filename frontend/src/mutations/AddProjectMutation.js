@@ -8,6 +8,7 @@ const mutation = graphql`
         node {
           id
           name
+          pathKey
           mocks {
             count
           }

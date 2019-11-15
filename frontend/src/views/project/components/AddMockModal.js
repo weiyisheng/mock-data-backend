@@ -5,6 +5,9 @@ import { Modal, Form, Input } from "antd";
 //mutations
 import AddMockMutation from "/src/mutations/AddMockMutation";
 
+//default template
+import { arrayTemplate } from "/src/views/mock/templates";
+
 function AddMock(props) {
   //props
   const { visible, close, form, parentID } = props;
@@ -24,7 +27,8 @@ function AddMock(props) {
         input: {
           name: values.name,
           pathKey: values.pathKey,
-          projectId: parentID
+          projectId: parentID,
+          template: arrayTemplate
         },
         onCompleted() {
           setLoading(false);

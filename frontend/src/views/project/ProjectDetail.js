@@ -30,12 +30,11 @@ function deleteProject(project, viewerID, history) {
         viewerID,
         onCompleted() {
           message.success("删除项目成功");
+          history.goBack();
         }
       });
     },
-    onCancel() {
-      history.goBack();
-    }
+    onCancel() {}
   });
 }
 
@@ -171,6 +170,10 @@ export default outerProps => {
         }
         if (!props) {
           return <div>Loading...</div>;
+        }
+
+        if (!props.viewer.project) {
+          return <p>项目不存在</p>;
         }
         return <ProjectDetail {...props} {...outerProps} />;
       }}

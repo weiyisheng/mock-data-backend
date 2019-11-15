@@ -16,6 +16,6 @@ export default SG.schema("Mock", {
   project: {
     $type: "Project",
     required: true,
-    mutable: false
+    columnOptions: { onDelete: "CASCADE" }
   }
 });

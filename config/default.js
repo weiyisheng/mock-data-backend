@@ -1,5 +1,5 @@
 export const db = {
-  schema: "MockData",
+  schema: "MockDataDB",
   user: "root",
   password: "Welcome1",
   options: {
