@@ -4,53 +4,33 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "node -r '@babel/register' -r '@babel/polyfill' ./server.js",
-    "update-schema": "node ./scripts/updateSchema.js",
-    "relay": "relay-compiler --src ./frontend/src --schema ./build/schema.json --watch"
+    "serve": "node -r '@babel/register' -r '@babel/polyfill' ./server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "antd": "^3.23.6",
     "codemirror": "^5.49.2",
     "config": "^3.2.4",
     "express": "^4.17.1",
     "express-graphql": "^0.9.0",
     "graphql": "^14.5.8",
     "graphql-relay": "^0.6.0",
-    "highlight.js": "^9.16.2",
-    "less": "^2.7.2",
     "lodash": "^4.17.15",
     "mockjs": "^1.0.1-beta3",
     "mysql2": "^2.0.0",
-    "parcel-bundler": "^1.12.4",
-    "react": "^16.10.2",
-    "react-codemirror": "^1.0.0",
-    "react-dom": "^16.10.2",
-    "react-relay": "^7.1.0",
-    "react-router-dom": "^5.1.2",
-    "relay-compiler": "^7.1.0",
-    "relay-config": "^7.1.0",
-    "relay-runtime": "^7.1.0",
-    "simple-graphql": "^2.1.10",
-    "sqlite3": "^4.1.0",
-    "superagent": "^5.1.0",
-    "templates": "^1.2.9"
+    "sequelize": "^5.21.2",
+    "simple-graphql": "^2.1.12"
   },
   "devDependencies": {
     "@babel/core": "^7.6.3",
     "@babel/parser": "^7.7.3",
     "@babel/polyfill": "^7.7.0",
     "@babel/preset-env": "^7.7.1",
-    "@babel/preset-react": "^7.7.0",
     "@babel/register": "^7.7.0",
     "babel-eslint": "^10.0.3",
-    "babel-plugin-relay": "^7.1.0",
     "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.4.0",
-    "eslint-plugin-html": "^6.0.0",
     "eslint-plugin-prettier": "^3.1.1",
-    "eslint-plugin-react": "^7.16.0",
     "prettier": "1.18.2"
   }
 }

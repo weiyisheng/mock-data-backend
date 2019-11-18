@@ -9,18 +9,13 @@ module.exports = {
   parser: "babel-eslint",
   extends: [    
     "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:prettier/recommended",
-    "prettier/react"
+    "plugin:prettier/recommended"
   ],
   plugins: [
-    "prettier",
-    'html'
+    "prettier"
   ],
   //参考见：https://eslint.org/docs/rules/
-  rules: {
-    "react/prop-types": [0, { }]
-  },
+  rules: {},
   parserOptions: {
     // 对Babel解析器的包装使其与 ESLint 兼容。
     //parser: 'babel-eslint',

@@ -1,19 +1,14 @@
 const express = require("express");
 const graphqlHTTP = require("express-graphql");
-
+const config = require("config");
+const PORT = config.get("PORT");
 // routers
-import MockRouter from "./backend/router/Mock";
+import MockRouter from "./src/router/Mock";
+import NotFoundRouter from "./src/router/NotFound";
 
 // graphql
-import schema from "./backend/schema";
-import sequelize from "./backend/sequelize";
-
-// parcel打包
-const Bundler = require("parcel-bundler");
-const file = "./frontend/index.html";
-const options = {};
-// 使用 file 和 options 参数，初始化新的 bundler
-const bundler = new Bundler(file, options);
+import schema from "./src/schema";
+import sequelize from "./src/sequelize";
 
 async function startServer() {
   // 自动创建数据表
@@ -34,10 +29,10 @@ async function startServer() {
 
   app.use(/\/v1.*/, MockRouter);
 
-  app.use(bundler.middleware());
+  app.use(NotFoundRouter);
 
-  console.log("GraphQL Server is now running on http://localhost:4000");
-  app.listen(4000);
+  console.log(`GraphQL Server is now running on http://localhost:${PORT}`);
+  app.listen(PORT);
 }
 
 startServer().then(
