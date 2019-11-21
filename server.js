@@ -31,7 +31,7 @@ async function startServer() {
 
   app.use(NotFoundRouter);
 
-  console.log(`GraphQL Server is now running on http://localhost:${PORT}`);
+  //console.log(`GraphQL Server is now running on http://localhost:${PORT}`);
   app.listen(PORT);
 }
 

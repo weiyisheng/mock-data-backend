@@ -1,9 +1,9 @@
 export const db = {
-  schema: "MockDataDB",
+  schema: "MockDB",
   user: "root",
   password: "Welcome1",
   options: {
-    host: "localhost",
+    host: "db",
     dialect: "mysql",
     pool: {
       max: 5,
@@ -13,4 +13,4 @@ export const db = {
   }
 };
 
-export const PORT = 5000;
+export const PORT = 3000;
