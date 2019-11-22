@@ -10,5 +10,5 @@ COPY ./wait-for-it.sh ./
 RUN chmod +x ./wait-for-it.sh
 RUN apk add --no-cache bash
 
-CMD ["./wait-for-it.sh", "db:3306", "--", "npm", "run", "serve"]
+CMD ["./wait-for-it.sh", "db:3306", "--timeout=10000", "--", "npm", "run", "serve"]
 
