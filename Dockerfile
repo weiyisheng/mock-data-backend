@@ -2,7 +2,7 @@ FROM node:10-alpine
 WORKDIR /usr/src/app
 ENV VERSION=1
 COPY ./package*.json ./
-RUN npm install --production
+RUN npm install
 COPY . .
 EXPOSE 3000
 
