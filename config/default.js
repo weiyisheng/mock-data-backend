@@ -3,7 +3,8 @@ export const db = {
   user: "root",
   password: "Welcome1",
   options: {
-    host: "db",
+    host: "172.19.12.140",
+    port: "9411",
     dialect: "mysql",
     pool: {
       max: 5,

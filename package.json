@@ -5,7 +5,8 @@
   "repository": "https://github.com/weiyisheng/mock-data-backend",
   "main": "index.js",
   "scripts": {
-    "serve": "node -r '@babel/register' -r '@babel/polyfill' ./server.js"
+    "dev": "NODE_ENV=development node -r '@babel/register' -r '@babel/polyfill' ./server.js",
+    "stage": "NODE_ENV=production node -r '@babel/register' -r '@babel/polyfill' ./server.js"
   },
   "author": "",
   "license": "ISC",

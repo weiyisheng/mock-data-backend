@@ -1,21 +1,20 @@
-FROM node:10-alpine
+FROM node:10.16
 WORKDIR /usr/src/app
 ENV VERSION=1
-COPY ./package*.json ./
 
-RUN echo "https://mirrors.aliyun.com/alpine/v3.9/main/" > /etc/apk/repositories && \
-    echo "https://mirrors.aliyun.com/alpine/v3.9/community/" >> /etc/apk/repositories && \
-    echo "https://mirrors.aliyun.com/alpine/edge/testing/" >> /etc/apk/repositories && \
-    npm config set registry 'https://registry.npm.taobao.org' 
+COPY ./package.json ./
+COPY ./yarn.lock ./
 
-RUN npm install
+RUN yarn config set registry 'https://registry.npm.taobao.org' 
+
+RUN yarn install
 
 COPY . .
-EXPOSE 3000
+
+EXPOSE 9412:3000
 
 COPY ./wait-for-it.sh ./
 RUN chmod +x ./wait-for-it.sh
-RUN apk add --no-cache bash
 
-CMD ["./wait-for-it.sh", "db:3306", "--timeout=10000", "--", "npm", "run", "serve"]
+CMD ["npm", "run", "serve"]
 
