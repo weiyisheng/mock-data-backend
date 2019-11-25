@@ -1,3 +1,5 @@
+console.log(' ---------------- default config -----------');
+
 export const db = {
   schema: "MockDB",
   user: "root",

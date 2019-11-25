@@ -1,9 +1,13 @@
+console.log(' ---------------- production -----------');
+
+
 export const db = {
     schema: "MockDB",
     user: "root",
     password: "Welcome1",
     options: {
       host: "db",
+      port: "3306",
       dialect: "mysql",
       pool: {
         max: 5,
